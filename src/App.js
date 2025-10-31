@@ -240,8 +240,9 @@ function App() {
 
   return (
     <div style={{
-      minHeight: '100vh',
-      minHeight: '100dvh', // Mobile viewport height
+      height: '100vh',
+      height: '100dvh', // Mobile viewport height
+      width: '100vw',
       background: '#000000',
       color: 'white',
       overflow: 'hidden',
@@ -249,8 +250,11 @@ function App() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '16px',
-      position: 'relative'
+      padding: 0,
+      margin: 0,
+      position: 'fixed',
+      top: 0,
+      left: 0
     }}>
       {/* Night Sky with Stars */}
       <div style={{
@@ -457,6 +461,7 @@ function App() {
           position: 'relative',
           width: '100%',
           maxWidth: '500px',
+          margin: '0 16px',
           transform: window.innerWidth > 768 
             ? `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)` 
             : 'none',
@@ -528,7 +533,7 @@ function App() {
 
           <div style={{
             position: 'relative',
-            padding: '20px 18px',
+            padding: '28px 24px',
             transform: 'translateZ(20px)'
           }}>
             
@@ -557,11 +562,11 @@ function App() {
             </div>
 
             <h1 style={{
-              fontSize: '22px',
+              fontSize: '26px',
               fontWeight: '300',
               color: 'rgba(224, 242, 254, 0.95)',
-              lineHeight: '1.25',
-              margin: '0 0 12px 0',
+              lineHeight: '1.3',
+              margin: '0 0 14px 0',
               textAlign: 'center',
               textShadow: '0 0 20px rgba(34, 211, 238, 0.3)'
             }}>
@@ -569,19 +574,19 @@ function App() {
             </h1>
 
             <p style={{
-              fontSize: '12px',
+              fontSize: '13px',
               color: 'rgba(186, 230, 253, 0.7)',
-              margin: '0 0 16px 0',
-              lineHeight: '1.4',
+              margin: '0 0 18px 0',
+              lineHeight: '1.5',
               fontWeight: '300',
               textAlign: 'center',
-              maxWidth: '350px',
+              maxWidth: '380px',
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
               Something new is coming to London's nightlife — where access means more than a name on a list.
               <br/>
-              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '11px', display: 'block', marginTop: '3px' }}>
+              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '12px', display: 'block', marginTop: '4px' }}>
                 For those who move quietly through Soho to Shoreditch.
               </span>
             </p>
