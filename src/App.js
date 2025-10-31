@@ -241,6 +241,7 @@ function App() {
   return (
     <div style={{
       minHeight: '100vh',
+      minHeight: '100dvh', // Mobile viewport height
       background: '#000000',
       color: 'white',
       overflow: 'hidden',
@@ -248,7 +249,7 @@ function App() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '20px',
+      padding: '16px',
       position: 'relative'
     }}>
       {/* Night Sky with Stars */}
@@ -367,7 +368,7 @@ function App() {
           bottom: 0,
           left: 0,
           right: 0,
-          height: '45%',
+          height: '50%',
           overflow: 'hidden'
         }}>
           {/* Buildings container */}
@@ -525,7 +526,7 @@ function App() {
 
           <div style={{
             position: 'relative',
-            padding: '48px 32px',
+            padding: '32px 24px',
             transform: 'translateZ(20px)'
           }}>
             
@@ -533,17 +534,17 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '40px'
+              marginBottom: '24px'
             }}>
               <div style={{
-                padding: '12px 32px',
+                padding: '10px 28px',
                 background: 'rgba(37, 99, 235, 0.9)',
                 backdropFilter: 'blur(8px)',
-                borderRadius: '14px',
+                borderRadius: '12px',
                 boxShadow: '0 0 30px rgba(59, 130, 246, 0.5)'
               }}>
                 <div style={{
-                  fontSize: '28px',
+                  fontSize: '24px',
                   fontWeight: 'bold',
                   letterSpacing: '0.15em',
                   textShadow: '0 0 15px rgba(34, 211, 238, 0.8)'
@@ -554,11 +555,11 @@ function App() {
             </div>
 
             <h1 style={{
-              fontSize: '32px',
+              fontSize: '28px',
               fontWeight: '300',
               color: 'rgba(224, 242, 254, 0.95)',
-              lineHeight: '1.4',
-              margin: '0 0 32px 0',
+              lineHeight: '1.3',
+              margin: '0 0 20px 0',
               textAlign: 'center',
               textShadow: '0 0 20px rgba(34, 211, 238, 0.3)'
             }}>
@@ -566,16 +567,16 @@ function App() {
             </h1>
 
             <p style={{
-              fontSize: '15px',
+              fontSize: '14px',
               color: 'rgba(186, 230, 253, 0.7)',
-              margin: '0 0 40px 0',
-              lineHeight: '1.7',
+              margin: '0 0 28px 0',
+              lineHeight: '1.6',
               fontWeight: '300',
               textAlign: 'center'
             }}>
               Something new is coming to London's nightlife — where access means more than a name on a list.
               <br/>
-              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '14px' }}>
+              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '13px' }}>
                 For those who move quietly through Soho to Shoreditch.
               </span>
             </p>
@@ -589,17 +590,17 @@ function App() {
                   placeholder="Enter your email"
                   style={{
                     width: '100%',
-                    padding: '16px 20px',
+                    padding: '14px 18px',
                     background: 'rgba(0, 0, 0, 0.5)',
                     backdropFilter: 'blur(8px)',
                     border: '1px solid rgba(6, 182, 212, 0.3)',
-                    borderRadius: '14px',
+                    borderRadius: '12px',
                     color: 'white',
                     fontSize: '15px',
                     fontWeight: '300',
                     boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)',
                     outline: 'none',
-                    marginBottom: '16px',
+                    marginBottom: '12px',
                     boxSizing: 'border-box'
                   }}
                   onFocus={(e) => {
@@ -616,19 +617,19 @@ function App() {
                   onClick={handleSubmit}
                   style={{
                     width: '100%',
-                    padding: '16px 32px',
+                    padding: '14px 28px',
                     background: 'linear-gradient(to right, #2563eb, #06b6d4)',
                     border: 'none',
-                    borderRadius: '14px',
+                    borderRadius: '12px',
                     color: 'white',
                     fontWeight: '400',
-                    fontSize: '16px',
+                    fontSize: '15px',
                     letterSpacing: '0.03em',
                     boxShadow: `0 0 30px rgba(59, 130, 246, ${0.4 + tiltIntensity * 0.2})`,
                     textShadow: '0 0 10px rgba(255, 255, 255, 0.3)',
                     cursor: 'pointer',
                     transition: 'all 0.3s',
-                    marginBottom: '24px'
+                    marginBottom: '16px'
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.transform = 'scale(1.02)';
@@ -646,19 +647,19 @@ function App() {
                   display: 'flex',
                   flexWrap: 'wrap',
                   justifyContent: 'center',
-                  gap: '8px',
-                  marginBottom: '20px'
+                  gap: '6px',
+                  marginBottom: '14px'
                 }}>
                   {['Early Access', 'Launch Updates', 'Exclusive Events'].map((feature, idx) => (
                     <div
                       key={idx}
                       style={{
-                        padding: '6px 14px',
+                        padding: '5px 12px',
                         background: 'rgba(6, 182, 212, 0.1)',
                         border: '1px solid rgba(6, 182, 212, 0.25)',
                         borderRadius: '20px',
                         color: 'rgba(103, 232, 249, 0.9)',
-                        fontSize: '12px',
+                        fontSize: '11px',
                         fontWeight: '300'
                       }}
                     >
