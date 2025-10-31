@@ -368,7 +368,7 @@ function App() {
           bottom: 0,
           left: 0,
           right: 0,
-          height: '50%',
+          height: '40%',
           overflow: 'hidden'
         }}>
           {/* Buildings container */}
@@ -457,7 +457,9 @@ function App() {
           position: 'relative',
           width: '100%',
           maxWidth: '500px',
-          transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+          transform: window.innerWidth > 768 
+            ? `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)` 
+            : 'none',
           transformStyle: 'preserve-3d',
           transition: 'transform 0.1s ease-out',
           zIndex: 1
@@ -526,7 +528,7 @@ function App() {
 
           <div style={{
             position: 'relative',
-            padding: '32px 24px',
+            padding: '20px 18px',
             transform: 'translateZ(20px)'
           }}>
             
@@ -534,17 +536,17 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '24px'
+              marginBottom: '12px'
             }}>
               <div style={{
-                padding: '10px 28px',
+                padding: '7px 22px',
                 background: 'rgba(37, 99, 235, 0.9)',
                 backdropFilter: 'blur(8px)',
-                borderRadius: '12px',
+                borderRadius: '10px',
                 boxShadow: '0 0 30px rgba(59, 130, 246, 0.5)'
               }}>
                 <div style={{
-                  fontSize: '24px',
+                  fontSize: '18px',
                   fontWeight: 'bold',
                   letterSpacing: '0.15em',
                   textShadow: '0 0 15px rgba(34, 211, 238, 0.8)'
@@ -555,11 +557,11 @@ function App() {
             </div>
 
             <h1 style={{
-              fontSize: '28px',
+              fontSize: '22px',
               fontWeight: '300',
               color: 'rgba(224, 242, 254, 0.95)',
-              lineHeight: '1.3',
-              margin: '0 0 20px 0',
+              lineHeight: '1.25',
+              margin: '0 0 12px 0',
               textAlign: 'center',
               textShadow: '0 0 20px rgba(34, 211, 238, 0.3)'
             }}>
@@ -567,16 +569,19 @@ function App() {
             </h1>
 
             <p style={{
-              fontSize: '14px',
+              fontSize: '12px',
               color: 'rgba(186, 230, 253, 0.7)',
-              margin: '0 0 28px 0',
-              lineHeight: '1.6',
+              margin: '0 0 16px 0',
+              lineHeight: '1.4',
               fontWeight: '300',
-              textAlign: 'center'
+              textAlign: 'center',
+              maxWidth: '350px',
+              marginLeft: 'auto',
+              marginRight: 'auto'
             }}>
               Something new is coming to London's nightlife — where access means more than a name on a list.
               <br/>
-              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '13px' }}>
+              <span style={{ color: 'rgba(165, 243, 252, 0.6)', fontSize: '11px', display: 'block', marginTop: '3px' }}>
                 For those who move quietly through Soho to Shoreditch.
               </span>
             </p>
@@ -590,17 +595,17 @@ function App() {
                   placeholder="Enter your email"
                   style={{
                     width: '100%',
-                    padding: '14px 18px',
+                    padding: '11px 14px',
                     background: 'rgba(0, 0, 0, 0.5)',
                     backdropFilter: 'blur(8px)',
                     border: '1px solid rgba(6, 182, 212, 0.3)',
-                    borderRadius: '12px',
+                    borderRadius: '10px',
                     color: 'white',
-                    fontSize: '15px',
+                    fontSize: '13px',
                     fontWeight: '300',
                     boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)',
                     outline: 'none',
-                    marginBottom: '12px',
+                    marginBottom: '8px',
                     boxSizing: 'border-box'
                   }}
                   onFocus={(e) => {
@@ -617,19 +622,19 @@ function App() {
                   onClick={handleSubmit}
                   style={{
                     width: '100%',
-                    padding: '14px 28px',
+                    padding: '11px 20px',
                     background: 'linear-gradient(to right, #2563eb, #06b6d4)',
                     border: 'none',
-                    borderRadius: '12px',
+                    borderRadius: '10px',
                     color: 'white',
                     fontWeight: '400',
-                    fontSize: '15px',
+                    fontSize: '13px',
                     letterSpacing: '0.03em',
                     boxShadow: `0 0 30px rgba(59, 130, 246, ${0.4 + tiltIntensity * 0.2})`,
                     textShadow: '0 0 10px rgba(255, 255, 255, 0.3)',
                     cursor: 'pointer',
                     transition: 'all 0.3s',
-                    marginBottom: '16px'
+                    marginBottom: '10px'
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.transform = 'scale(1.02)';
@@ -647,19 +652,19 @@ function App() {
                   display: 'flex',
                   flexWrap: 'wrap',
                   justifyContent: 'center',
-                  gap: '6px',
-                  marginBottom: '14px'
+                  gap: '5px',
+                  marginBottom: '8px'
                 }}>
                   {['Early Access', 'Launch Updates', 'Exclusive Events'].map((feature, idx) => (
                     <div
                       key={idx}
                       style={{
-                        padding: '5px 12px',
+                        padding: '4px 9px',
                         background: 'rgba(6, 182, 212, 0.1)',
                         border: '1px solid rgba(6, 182, 212, 0.25)',
                         borderRadius: '20px',
                         color: 'rgba(103, 232, 249, 0.9)',
-                        fontSize: '11px',
+                        fontSize: '9.5px',
                         fontWeight: '300'
                       }}
                     >
@@ -672,12 +677,12 @@ function App() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '6px',
+                  gap: '5px',
                   color: 'rgba(34, 211, 238, 0.4)',
-                  fontSize: '11px',
+                  fontSize: '10px',
                   fontWeight: '300'
                 }}>
-                  <svg style={{ width: '11px', height: '11px' }} fill="currentColor" viewBox="0 0 20 20">
+                  <svg style={{ width: '10px', height: '10px' }} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                   </svg>
                   <span>Private & Encrypted</span>
