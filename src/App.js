@@ -541,23 +541,24 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '12px'
+              marginBottom: '14px'
             }}>
               <div style={{
-                padding: '7px 22px',
-                background: 'rgba(37, 99, 235, 0.9)',
+                padding: '10px 20px',
+                background: 'rgba(255, 255, 255, 0.95)',
                 backdropFilter: 'blur(8px)',
-                borderRadius: '10px',
+                borderRadius: '12px',
                 boxShadow: '0 0 30px rgba(59, 130, 246, 0.5)'
               }}>
-                <div style={{
-                  fontSize: '18px',
-                  fontWeight: 'bold',
-                  letterSpacing: '0.15em',
-                  textShadow: '0 0 15px rgba(34, 211, 238, 0.8)'
-                }}>
-                  CLYQ
-                </div>
+                <img 
+                  src="/clyq-logo.png" 
+                  alt="CLYQ"
+                  style={{
+                    height: '32px',
+                    width: 'auto',
+                    display: 'block'
+                  }}
+                />
               </div>
             </div>
 
