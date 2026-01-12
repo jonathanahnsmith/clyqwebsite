@@ -812,6 +812,17 @@ function App() {
         }}>
           London
         </div>
+        <div style={{ 
+          marginTop: '8px', 
+          display: 'flex', 
+          gap: '12px', 
+          justifyContent: 'center',
+          fontSize: '10px'
+        }}>
+          <a href="/privacy" style={{ color: 'rgba(34, 211, 238, 0.6)', textDecoration: 'none', cursor: 'pointer' }}>Privacy</a>
+          <span style={{ color: 'rgba(34, 211, 238, 0.2)' }}>•</span>
+          <a href="/terms" style={{ color: 'rgba(34, 211, 238, 0.6)', textDecoration: 'none', cursor: 'pointer' }}>Terms</a>
+        </div>
       </div>
 
       <style>{`
